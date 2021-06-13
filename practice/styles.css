@@ -1,0 +1,41 @@
+@import url('https://font.googleapis.com/css?family=CrimsonText'); 
+* {
+	box-sizing: border-box; 
+	font-family:CrimsonText; 
+	color:#777; 
+}
+
+
+html, body {
+	margin: 0; 
+	padding: 0; 
+}
+
+.navigation ul {
+	margin: 0; 
+}
+
+.navigation li {
+	display: inline;
+
+}
+
+.navigation a {
+	display: inline-block;
+	padding: .5em;
+	color: white; 
+	text-decoration: none; 
+}
+
+
+.navigation a:hover {
+	background-color: rgba(68, 0, 255, 0.2); 
+}
+
+.main-header {
+	background-color: rgba(0,0,0,.3); 
+	background-image: url('Pictures/villa-del-balbianello-lake-como.jpg'); 
+	background-blend-mode: multiply; 
+	background-size: cover; 
+	padding-bottom: 300px; 
+}
