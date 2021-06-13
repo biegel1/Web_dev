@@ -29,7 +29,51 @@ html, body {
 
 
 .navigation a:hover {
-	background-color: rgba(68, 0, 255, 0.2); 
+	background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.main-nav {
+	text-align: center; 
+	font-size: 1.2em;
+	font-weight: lighter; 
+	border-bottom: 1px solid rgba(255, 255, 255,  .3);
+
+}
+
+.main-nav li {
+	padding: 0 5%; 
+}
+
+
+.hw {
+	text-align: center; 
+	margin: 0; 
+	font-size: 4em; 
+	font-family: 'Lucida Sans'; 
+	font-weight: normal; 
+	color: white; 
+}
+
+.hw-large{
+	font-size: 8em; 
+}
+
+.content-section {
+	margin: 1em; 
+}
+
+.section-header {
+	font-family: 'Tahoma'; 
+	text-align: center; 
+	color: #333; 
+	font-weight: normal; 
+
+}
+
+.container {
+	max-width: 1000px;
+	margin:0 auto; 
+	padding: 0 1.5em; 
 }
 
 .main-header {
