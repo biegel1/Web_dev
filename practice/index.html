@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title> Hello World | Index </title>
-		<meta name = 'description' contents= 'This is the description'
-		<link ref='stylesheet' href = 'styles.css'
+		<meta name = 'description' contents= 'This is the description'>
+		<link rel='stylesheet' href = 'styles.css'/>
 
 	</head>
 	<body>
-		<header>
-			<nav>
+		<header class = 'main-header'>
+			<nav class = 'navigation main-nav'>
 				<ul>
 					<li><a href= 'index.html'>HOME</a></li>
 					<li><a href = 'store.html'>STORE</a> </li>
@@ -16,42 +16,35 @@
 
 				</ul>
 			</nav>
-			<hr>
-			<h1> Hello World</h1>
+			<h1 class = 'hw hw-large'> Hello World</h1>
+			<div class = 'container'> 
+				<button class= 'btn btn-header' type = 'button'>This is a nice button</button>
+			</div>
+			<button class= 'btn btn-header btn-play' type = 'button'>&#9658;</button>
 		</header>
-		<section>
-			<h2>
+		<section class= 'content-section container'>
+			<h2 class = 'section-header'>
 				2nd Header
 			</h2>
 			<div>
-				<div>
-					<strong>Here</strong> 
-					&lt; &gt; 
-					<span>stands some random stuff</span>
-					&lt; &gt;
-					<button> Click here!</button>
-					<hr>
+				<div class = 'row'>
+					<span class = 'item date'>Here</span> 
+					<span class = 'item city' >stands some random stuff</span>
+					<span class = 'item arena' >c++</span>
+					<button class = 'btn item tour-button btn-primary'> Click here!</button>
 
 				</div>
-			</div>
-			<div>
-				<div>
-					<strong>Here</strong> 
-					&lt; &gt;
-					<span>stands more random stuff</span>
-					&lt; &gt;
-					<button> Click here!</button>
-					<hr>
+				<div class = 'row'>
+					<span class = 'item date'>Here</span> 
+					<span class = 'item city'>stands more random stuff</span>
+					<span class = 'item arena' >python</span>
+					<button class = 'btn item tour-button btn-primary'> Click here!</button>
 				</div>
-			</div>
-			<div>
-				<div> 
-					<strong>Here</strong> 
-					&lt; &gt;
-					<span>stands even more random stuff</span>
-					&lt; &gt;
-					<button> Click here!</button>
-				<hr>
+				<div class = 'row'> 
+					<span class = 'item date'>Here</span> 
+					<span class = 'item city'>stands even more random stuff</span>
+					<span class = 'item arena' >JavaScript</span>
+					<button class = 'btn item tour-button btn-primary'> Click here!</button>
 				</div>
 
 			</div>
@@ -59,14 +52,24 @@
 
 		</section>
 
-		<footer>
-			<h3> The 3rd header in the footer section</h3>
-			<ul>
-				<li>first footer element</li>
-				<li>second footer element</li>
-				<li>third footer element</li>
+		<footer class = 'main-footer'>
+		<div class = 'container main-footer-container'>			
+			<h3 class = 'hw'> The 3rd header</h3>
+			<ul class = 'navigation footer-nav'>
+				<li> 
+					<a><img  src = 'pictures/villa-del-balbianello-lake-como.jpg'></a>
+				</li>
+				<li>
+					<img src = 'pictures/c++_logo.png'>
+				</li>
+				<li>
+					<img src = 'pictures/villa-del-balbianello-lake-como.jpg'>
+				</li>
 			</ul>
-		</footer>
+		</div>
+
+
+		</footer>>
 
 	</body>
 
