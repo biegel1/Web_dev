@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> MY TITLE </title>
+		<title> Hello World | Store </title>
 		<meta name = 'description' contents= 'This is the description'>
 		<link rel='stylesheet' href = 'styles.css'/>
+		<script src= 'store.js' async ></script>
 
 	</head>
 	<body>
-		<header>
-			<nav>
+		<header class = 'main-header'>
+			<nav class  = 'navigation main-nav'>
 				<ul>
 					<li><a href= 'index.html'>HOME</a></li>
 					<li><a href = 'store.html'>STORE</a> </li>
@@ -16,137 +17,134 @@
 
 				</ul>
 			</nav>
-			<hr>
-			<h1> Hello World | STORE </h1>
+			<h1 class = 'hw hw-large'> Hello World </h1>
 		</header>
-		<button>Click here</button>
-		<br>
-		<br>
-		<!-- TODO: add here some stuff-->
-		<button>&#9658</button>
-		<section>
-			<h2>First header</h2>
-			<div>
-				<div>
-					<strong>Subject 1</strong>
-				</div>
-				<div>
-					<span>some stuff</span>
-					<button role = 'button'>add to cart</button>
-		
-				</div>
+		<section class = 'container content-section'>
+			<h2 class = 'section-header'>First header</h2>
+			<div class = 'shop-items'>
+				<div class = 'shop-item'>
+					<span class = 'shop-item-title'>Subject 1</span>
+					<img class = 'shop-item-image' src = 'pictures/villa-del-balbianello-lake-como.jpg'>
+					<div class = 'shop-item-details'>
+						<span class = 'shop-item-price'>some stuff</span>
+						<button class = 'btn btn-primary shop-item-button' role = 'button'>add to cart</button>
+			
+					</div>
 
-			</div>
-			<div>
-				<div>
-					<strong>Subject 2</strong>
 				</div>
-				<div>
-					<span>some stuff</span>
-					<button role = 'button'>add to cart</button>
-		
-				</div>
+				<div class = 'shop-item'>
+					<span class = 'shop-item-title'>Subject 2</span>
+					<img class = 'shop-item-image' src = 'pictures/villa-del-balbianello-lake-como.jpg'>
+					<div class = 'shop-item-details'>
+						<span class = 'shop-item-price'>some stuff</span>
+						<button class = 'btn btn-primary shop-item-button' role = 'button'>add to cart</button>
+			
+					</div>
 
-			</div>
-			<div>
-				<div>
-					<strong>Subject 3</strong>
 				</div>
-				<div>
-					<span>some stuff</span>
-					<button role = 'button'>add to cart</button>
-		
-				</div>
+				<div class = 'shop-item'>
+					<span class ='shop-item-title'>Subject 3</span>
+					<img class = 'shop-item-image' src = 'pictures/villa-del-balbianello-lake-como.jpg'>
+					<div class = 'shop-item-details'>
+						<span class = 'shop-item-price'>some stuff</span>
+						<button class = 'btn btn-primary shop-item-button' role = 'button'>add to cart</button>
+			
+					</div>
 
+				</div>
 			</div>
 		</section>
-		<section>
-			<h2>Second header </h2>
-			<div>
-				<div>
-					<strong>Subject 1</strong>
-				</div>
-				<div>
-					<span>different stuff</span>
-					<button role = 'button'>add to cart</button>
-		
-				</div>
+		<section class = 'container content-section'>
+			<h2 class = 'section-header'>Second header </h2>
+			<div class = shop-items>
+				<div class = 'shop-item'>
+					<span class = 'shop-item-title'>Subject 1</span>
+					<img class = 'shop-item-image' src = 'pictures/c++_logo.png'>
+					<div class = 'shop-item-details'>
+						<span class = 'shop-item-price'>different stuff</span>
+						<button class ='btn btn-primary shop-item-button' role = 'button'>add to cart</button>
+			
+					</div>
 
-			</div>
-			<div>
-				<div>
-					<strong>Subject 2</strong>
 				</div>
-				<div>
-					<span>different stuff</span>
-					<button role = 'button'>add to cart</button>
-		
-				</div>
+				<div class = 'shop-item'>
+					<span class = 'shop-item-title'>Subject 2</span>
+					<img class = 'shop-item-image' src = 'pictures/c++_logo.png'>
+					<div class = 'shop-item-details'>
+						<span class = 'shop-item-price'>different stuff</span>
+						<button class = 'btn btn-primary shop-item-button' role = 'button'>add to cart</button>
+			
+					</div>
 
-			</div>
-			<div>
-				<div>
-					<strong>Subject 3</strong>
 				</div>
-				<div>
-					<span>different stuff</span>
-					<button role = 'button'>add to cart</button>
-		
-				</div>
+				<div class = 'shop-item'>
+					<span class = 'shop-item-title'>Subject 3</span>
+					<img class = 'shop-item-image' src = 'pictures/c++_logo.png'>
+					<div>
+						<span class = 'shop-item-price'>different stuff</span>
+						<button class = 'btn btn-primary shop-item-button' role = 'button'>add to cart</button>
+					</div>
 
+				</div>
 			</div>
 		</section>
-		<section>
-			<h2>Third header</h2>
-			<div>
-				<strong>ITEM</strong>
-				&lt; &gt; 
-				<strong>PRICE</strong>
-				&lt; &gt; 
-				<strong>QUANTITY</strong>
+		<section class = 'container content-section'>
+			<h2 class = 'section-header'>Third header</h2>
+			<div class = 'cart-row'>
+				<span class = 'cart-item cart-header cart-column'>ITEM</span>
+				<span class = 'cart-price cart-header cart-column'>PRICE</span>
+				<span class = 'cart-quantity cart-header cart-column'>QUANTITY</span>
 			</div>
-			<div>
-				<span>Some stuff</span>
-				&lt; &gt; 
-				<span>Price</span>
-				<input type= 'number' value = '1'> 
-				<button role = 'button'> REMOVE </button>
-			</div>
-			<div>
-				<strong>ITEM</strong>
-				&lt; &gt; 
-				<strong>PRICE</strong>
-				&lt; &gt; 
-				<strong>QUANTITY</strong>
-			</div>
-			<div>
-				<span>Some stuff</span>
-				&lt; &gt; 
-				<span>Price</span>
-				<input type= 'number' value = '2'> 
-				<button role = 'button'> REMOVE </button>
-			</div>
-			<hr>
-			<div>
-				<strong>TOTAL</strong>
-				<span>30€</span>
-			</div>
-			<div>
-				<button role = 'button'> Purchase</button>
+			<div class = 'container'>
+				<div class = 'cart-row'>
+					<div class = 'cart-item cart-column'>
+						<img class = 'cart-item-image' src = 'pictures/c++_logo.png' widht= '100' height='100'>
+						<span class ='cart-item-title'>Some stuff</span>
+					</div>
 
+					<span class = 'cart-price cart-column'>500€</span>
+					<div class = 'cart-quantity cart-column'>
+						<input class = 'cart-quantity-input' type= 'number' value = '1'> 
+						<button class = 'btn btn-danger' role = 'button'> REMOVE </button>
+					</div>
+				</div>
+				<div class = 'cart-row'>
+					<div class= 'cart-item cart-column'>
+						<img class = 'cart-item-image' src = 'pictures/c++_logo.png' widht= '100' height='100'>
+						<span class = 'cart-item-title'>Stuff</span>
+					</div>
+					<span class = 'cart-price cart-column'>20€</span>
+					<div class = 'cart-quantity cart-column'>
+						<input class = 'cart-quantity-input' type= 'number' value = '2'> 
+						<button class = 'btn btn-danger' role = 'button'> REMOVE </button>
+					</div>
+				</div>
+			<div class = 'cart-total'>
+				<span class = 'cart-total-title'>TOTAL</span>
+				<span class = 'cart-total-price'>30€</span>
 			</div>
+			<button class = 'btn btn-primary btn-purchase' role = 'button'> Purchase</button>
 
 		</section>
 
-		<footer>
-			<h3> The 3rd header in the footer section</h3>
-			<ul>
-				<li>first footer element</li>
-				<li>second footer element</li>
-				<li>third footer element</li>
+		<footer class = 'main-footer'>
+		<div class = 'container main-footer-container'>			
+			<h3 class = 'hw'> The 3rd header</h3>
+			<ul class = 'navigation footer-nav'>
+				<li> 
+					<a><img  src = 'pictures/villa-del-balbianello-lake-como.jpg'></a>
+				</li>
+				<li>
+					<img src = 'pictures/c++_logo.png'>
+				</li>
+				<li>
+					<img src = 'pictures/villa-del-balbianello-lake-como.jpg'>
+				</li>
 			</ul>
-		</footer>
+		</div>
 
+
+		</footer>
 	</body>
 
 </html>
