@@ -33,10 +33,6 @@ function Square(props){
   ); 
 }
 
-function ConstructBoard(props){
-
-}
-
 class Board extends React.Component {
   renderSquare(i){
     return <Square  
@@ -45,8 +41,43 @@ class Board extends React.Component {
   }
 
   render(){
+    const playField = {
+      fields: [],
+      counter: 0
+    }; 
+
+    for(let i = 0; i<3; i++){
+      playField.fields[i] = []
+    }
+    
+
+    for(let i = 0; i<3; i++){
+      for(let j = 0; j<3; j++){
+        playField.fields[i][j] = playField.counter;
+        playField.counter++;
+      }
+    }
+    console.log(playField.fields)
+
     return (
-      <div>
+      playField.fields.map(x =>{
+        let val = this.props.step; 
+        return (
+          <div key = {x.toString()}>
+            <div key= {val.toString()} className = 'board-row'>
+              {x.map(i => {
+                val++;
+                console.log(val)
+                return (
+                  this.renderSquare(i)
+                )
+              })}
+            </div>
+          </div>
+          
+        );
+      })
+     /* <div>
         <div className = 'board-row'>
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -63,7 +94,9 @@ class Board extends React.Component {
           {this.renderSquare(8)}
         </div>
       </div>
+      */
     ); 
+    
   }
 }
 class Game extends React.Component {
@@ -144,6 +177,7 @@ class Game extends React.Component {
         <div className = 'game-board'>
           <Board
             squares = {current.squares}
+            step = {this.state.stepNumber}
             onClick = {(i) => this.handleClick(i)}
           />
         </div>
