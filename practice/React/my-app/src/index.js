@@ -23,80 +23,56 @@ function ButtonBoldFormatter(props){
   }
 }
 
+
 function Square(props){
   return (
-    <button 
-      className = 'square' 
-      onClick= {props.onClick}>
-      {props.value}
-    </button>
+      <button 
+        key = {props.id}
+        className = 'square' 
+        onClick= {props.onClick}>
+        {props.value}
+      </button>
   ); 
 }
 
-class Board extends React.Component {
-  renderSquare(i){
-    return <Square  
-      	value= {this.props.squares[i]}
-        onClick = {() =>this.props.onClick(i)}/>; 
+function create3x3PlayFieldArray(){
+  let array = Array(3).fill(null).map(x=>[])
+  const iterator = {
+    count: 0,
+  };
+  for(let i = 0; i<3; i++){
+    for(let j = 0; j<3; j++){
+      array[i][j] = iterator.count; 
+      iterator.count++; 
+    }
   }
+  return array
+}
 
+class Board extends React.Component {
   render(){
     const playField = {
-      fields: [],
-      counter: 0
+      fields: create3x3PlayFieldArray(),
+      counter: 0, 
     }; 
-
-    for(let i = 0; i<3; i++){
-      playField.fields[i] = []
-    }
-    
-
-    for(let i = 0; i<3; i++){
-      for(let j = 0; j<3; j++){
-        playField.fields[i][j] = playField.counter;
-        playField.counter++;
-      }
-    }
-    console.log(playField.fields)
-
     return (
-      playField.fields.map(x =>{
-        let val = this.props.step; 
+      <div>
+        {playField.fields.map((x) =>{
         return (
-          <div key = {x.toString()}>
-            <div key= {val.toString()} className = 'board-row'>
+            <div key = {x.toString()} className = 'board-row'>
               {x.map(i => {
-                val++;
-                console.log(val)
                 return (
-                  this.renderSquare(i)
+                    <Square  
+                    key = {i.toString()}
+                    value= {this.props.squares[i]}
+                    onClick = {() => this.props.onClick(i)}/>
                 )
               })}
             </div>
-          </div>
-          
-        );
-      })
-     /* <div>
-        <div className = 'board-row'>
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className = 'board-row'>
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className = 'board-row'>
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        )
+        })}
       </div>
-      */
     ); 
-    
   }
 }
 class Game extends React.Component {
@@ -159,8 +135,8 @@ class Game extends React.Component {
       }
 
       return (
-        <li key = {move}>
-          <ButtonBoldFormatter onClick = {() => this.jumpTo(move)} buttonBold = {buttonStyle.bold} value = {desc}/>
+        <li key = {move.toString()}>
+          <ButtonBoldFormatter  onClick = {() => this.jumpTo(move)} buttonBold = {buttonStyle.bold} value = {desc}/>
         </li>
       );
     });
