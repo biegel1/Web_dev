@@ -22,19 +22,21 @@ function NavigationList(props){
     <PhoneIcon className = {styles}/>, 
   ]
   return (
-    <div className = 'flex border-b-2 justify-end my-2'>
-      <ul >
-        {items.map((item, i) =>{
-          return (
-            <div key = {i.toString()} className = 'inline-block '>
-              <li key = {i.toString()} className ='cursor-pointer text-gray-500 flex p-1 mx-12 text-base sm:text-xl hover:text-black'>
-                {icons[i]}
-                {item}
-              </li>
-            </div>
-          )
-        })}
-      </ul>
+    <div className = 'py-5'>
+      <div className = 'flex bg-white bg-opacity-95 p-1 w-full fixed justify-center top-0'>
+          <ul>
+            {items.map((item, i) =>{
+              return (
+                <div key = {i.toString()} className = 'inline-block '>
+                  <li key = {i.toString()} className ='cursor-pointer text-gray-500 flex p-1 mx-12 text-base sm:text-base hover:text-black'>
+                    {icons[i]}
+                    {item}
+                  </li>
+                </div>
+              )
+            })}
+          </ul>
+      </div>
     </div>
   )
 }
