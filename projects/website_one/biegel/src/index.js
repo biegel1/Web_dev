@@ -10,8 +10,8 @@ import History from './history.js';
 
 ReactDOM.render(
   <div>
-    <MainHeader/>
     <NavigationBar/>
+    <MainHeader/>
     <History/>
     <EmployeeSection/>
   </div>,
